@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global styles */
+body {
+  font-family:'Archivo Narrow', sans-serif;
+  line-height: 1.6;
+}
+
+/* Styling each section */
+.section {
+  padding: 32px;
+  text-align: center;
+  /*min-height: 100vh;*/
+}
+
+/* Background image for Section 1 */
+#section1 {
+  background-size: cover;
+  height: 485px;
+  background-position: center;
+  color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Center content inside Section 1 */
+.content-center {
+  text-align: center;
+  padding: 30px;
+}
+
+/* Title and subheading styles */
+#section1 h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  
+}
+
+#section1 h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Background colors for other sections */
+#section2 {
+  background-color: #2ecc71;
+  color: black;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 16px; /* Space below the section title */
+  font-size: 30pt; /* Size for the section title */
+}
+.section-content {
+  /*max-width: 1000px; /* Limit maximum width */
+  margin-left: 184pt;
+  margin-right: 184pt;
+  margin-top: 18pt;
+}
+.text-content {
+  /*width: 55%; /* Adjust width to allow for floating */
+  text-align: left;
+}
+/* Image styles */
+.middle-image {
+  width: 400px;
+  height: 300px;
+  float: right;
+  /*margin-right: 20pt;*/
+  margin-left: 40pt;
+  margin-bottom: 32pt;
+}
+.text-content p {
+  margin-bottom: 15px; /* Add margin below each paragraph */
+  word-spacing: 2.3pt;
+}
+.section-content::after {
+  content: "";
+  display: table;
+  clear: both; /* Clear the float */
+}
+#section3 {
+  background-color: #f1c40f;
+  color: black;
+  padding: 50px; /* Padding */
+}
+.photo-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 8px 18px; /* Space between grid items */
+  margin: 20px auto; /* Center the grid */
+  margin-left: 170pt;
+  margin-right: 184pt;
+}
+.photo-item {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap:10pt;
+  margin-top: 12pt;
+  margin-right: 18pt;
+}
+
+/* Image styles for the grid */
+.grid-image {
+  width: 200px;
+  height: 150px;
+}
+.text-content p {
+  margin: 0; /* Remove default margin for paragraph */
+}
+/* Title styles */
+.photo-item h3 {
+  margin: 0;
+}
+
+/* Paragraph styles */
+.photo-item p {
+  margin: 0; /* Remove default margin for paragraph */
+}
+
+#section4 {
+background-color: #e74c3c;
+  color: black;
+  
+}
+#section4 p{
+  text-align: center;
+  font-size: 18pt;
+  margin-left: 280pt;
+  margin-right: 280pt;
+  margin-bottom: 48pt;
+  word-spacing: 2.5pt;
+}
+footer {
+  color: black; /* White text color */
+  text-align: left; /* Center text */
+  padding: 30px 0; /* Padding above and below */
+  padding-top: 20px; /* Space above the footer */
+  padding-left: 195pt;
+  padding-bottom: 30px;
+  background-color: aliceblue;
+}
