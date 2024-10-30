@@ -1,0 +1,585 @@
+
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.button_container {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Spotify Button */
+a#btn_spotify {
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 40px 0 40px;
+    background-color: #2ebd59;
+    border: 2px solid #2ebd59;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+a#btn_spotify:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+
+/* Amazon Button */
+a#btn_amazon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 75px;
+    padding-top: 8px;
+    background-color: #232f3e;
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    transition: all 0.2s;
+}
+
+a#btn_amazon:hover {
+    background-color: #fc9a18;
+}
+
+/* Twitter Button */
+a#btn_twitter {
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 105px;
+    padding: 10px 30px 0 30px;
+    background-color: #56cdf1;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a#btn_twitter:hover {
+    background: linear-gradient(135deg, rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ebfec', endColorstr='#28a5cb', GradientType=1);
+}
+
+a#btn_indiegogo {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #eb1478;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -2px;
+    transition: all 0.2s;
+}
+
+a#btn_indiegogo:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #eb1478;
+    transition: all 0.5s;
+}
+
+a#btn_indiegogo:hover {
+    color: #fff;
+}
+
+a#btn_indiegogo:hover:before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+a#btn_indiegogo span {
+    position: relative;
+    z-index: 10;
+}
+
+a#btn_coca-cola {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #f40009;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+a#btn_coca-cola:hover {
+    background-color: white;
+    color: #f40009;
+    border: 2px solid #f40009;
+    transform: scale(1.05);
+    cursor: pointer;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-1px); }
+}
+
+a#btn_apple {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+
+a#btn_apple:hover {
+    background-color: #fff; 
+    color: #000;
+    border: 1px solid #000;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+a#btn_apple::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+a#btn_apple:hover::before {
+    opacity: 1;
+}
+
+a#btn_nerf {
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.nerf_logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 15px;
+}
+
+a#btn_nerf:hover .nerf_logo {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button_container {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+a#btn_harley {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+a#btn_harley img.logo {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+a#btn_harley:hover img.logo {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+a#btn_harley::after {
+    content: "";
+    background-image: url('https://i.etsystatic.com/9853876/r/il/29f214/638542857/il_1588xN.638542857_hx05.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+a#btn_harley:hover::after {
+    opacity: 1;
+    z-index: 1;
+}
+
+a#btn_michaelkors {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a#btn_michaelkors:hover {
+    background-color: #d6a441;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+a#btn_michaelkors::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d6a441;
+    border-radius: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a#btn_michaelkors:hover::before {
+    opacity: 1;
+}
+
+a#btn_ideo {
+    display: inline-block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f5f5f5 50%, #0072c6 50%);
+    color: #0072c6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+a#btn_ideo:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #0072c6 50%, #f5f5f5 50%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 114, 198, 0.5);
+}
+
+a#btn_ideo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    background: rgba(0, 114, 198, 0.1);
+    z-index: -1;
+}
+
+a#btn_ideo:hover::before {
+    border-color: #0072c6;
+    opacity: 1;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+}
+
+
+a#btn_sardella {
+    display: inline-block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #c84b36;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+a#btn_sardella:hover {
+    background-color: #f7a76b;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(200, 75, 54, 0.5);
+}
+
+.sardella_icon {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+a#btn_sardella:hover .sardella_icon {
+    opacity: 1;
+}
+
+a#btn_sardella::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/wood.png');
+    opacity: 0.2;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+
+a#btn_sardella:hover::before {
+    opacity: 0.5;
+}
+
+
+a#btn_sardella::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 30px;
+border: 4px solid rgba(200, 75, 54, 0);
+transition: all 0.4s ease;
+box-shadow: 0 0 10px rgba(200, 75, 54, 0.5);
+
+}
+
+
+a#btn_sardella:hover::after {
+    border-color: rgba(200, 75, 54, 0.5);
+    z-index: 0;
+}
+
+a#btn_craigslist {
+    display: inline-block;
+    width: 150px; 
+    height: 150px; 
+    line-height: 150px; 
+    border-radius: 50%; 
+    background-color: #ff4500;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+a#btn_craigslist:hover {
+    background-color: #ffffff;
+    color: #ff4500;
+    border: 4px solid #ff4500;
+    transform: scale(1.1);
+}
+
+a#btn_craigslist::before {
+    content: "";
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    width: 100%;
+    height: 100%; 
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+a#btn_craigslist:hover::before {
+    opacity: 1; 
+} 
+
+/* Lyft Button Styles */
+a#btn_lyft {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ff5a5f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+a#btn_lyft span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+a#btn_lyft:hover {
+    background-color: #ffffff;
+    color: #ff5a5f;
+}
+
+a#btn_lyft:hover span {
+    transform: translateX(20px);
+}
+
+a#btn_samsung {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background-color: #1428a0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+a#btn_samsung:hover {
+    background-color: #ffffff;
+    color: #1428a0;
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+a#btn_samsung:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 40, 160, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s ease-out forwards;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+
+
